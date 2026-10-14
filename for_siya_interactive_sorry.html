@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Siya 💗</title>
+<style>
+:root{--pink:#ffc6d8;--rose:#f39bb7;--lav:#d8c7ff;--ink:#5b4b57}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at 15% 20%,#fff0f5,transparent 35%),radial-gradient(circle at 85% 80%,#e8e0ff,transparent 38%),#fff8f1;color:var(--ink);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+body:before{content:"♡     ✿       ♡       ✧       ♡";position:fixed;top:7%;left:0;width:100%;text-align:center;color:#f3a9c0;font-size:25px;letter-spacing:18px;opacity:.8;pointer-events:none}
+.card{width:min(430px,100%);min-height:570px;border:1px solid #f6dce5;border-radius:30px;background:rgba(255,255,255,.84);box-shadow:0 18px 55px #c8a5b83b,inset 0 0 0 7px #fff;position:relative;padding:28px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden}
+.card:before,.card:after{content:"✿";position:absolute;color:#f5b3c9;font-size:32px;opacity:.65}.card:before{top:15px;left:17px}.card:after{bottom:13px;right:18px}
+.screen{width:100%;display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;animation:fade .5s ease}.screen.active{display:flex}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.heart{font-family:Arial,sans-serif;font-size:74px;filter:drop-shadow(0 7px 6px #ee9eb54c);animation:beat 1.3s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+h1{font-weight:normal;font-size:32px;margin:12px 0;color:#986b85;font-style:italic}
+p{font-size:17px;line-height:1.65;margin:8px 0 22px}
+button{font:inherit;border:0;cursor:pointer;color:#76576e;background:linear-gradient(135deg,#ffe0e9,#e6dcff);padding:12px 24px;border-radius:999px;box-shadow:0 5px 12px #b38aa52b;transition:transform .15s,filter .15s}
+button:hover{transform:translateY(-2px);filter:saturate(1.08)}button:active{transform:scale(.97)}
+.small{font-size:13px;color:#a88a9d;margin-top:14px}
+.paws{font-size:47px;margin:5px}
+.heart-buttons{width:100%;display:grid;gap:12px;margin:8px 0 20px}
+.heart-buttons button{font-family:Arial,sans-serif;font-size:24px;padding:13px}
+.heart-buttons button:nth-child(1){background:linear-gradient(90deg,#ffe2e5,#ffc9d4)}
+.heart-buttons button:nth-child(2){background:linear-gradient(90deg,#ffe0f0,#f4c6ed)}
+.heart-buttons button:nth-child(3){background:linear-gradient(90deg,#e7dfff,#d0c1ff)}
+.note{background:#fff9fb;border:1px solid #f3d7e2;border-radius:22px;padding:24px 20px;width:100%;box-shadow:0 8px 25px #cda8b322}
+.note h2{font-weight:normal;font-style:italic;font-size:29px;color:#986b85;margin:0 0 14px}
+.note p{font-size:16px;margin:0;line-height:1.7}
+.signature{font-size:22px;color:#c67b9d;font-style:italic;margin-top:18px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<main class="card" aria-live="polite">
+  <section class="screen active" id="s0">
+    <div class="heart">🎁</div><h1>Hey Siya 💗</h1>
+    <p>I made a little something for you.<br>Will you open it?</p>
+    <button onclick="go(1)">Open your gift ♡</button><div class="small">made with care, just for you</div>
+  </section>
+  <section class="screen" id="s1">
+    <div class="paws">🐰💞</div><h1>Hey, cutiepie</h1>
+    <p>There’s something important I want to tell you, Siya.<br>Please tap continue when you’re ready.</p>
+    <button onclick="go(2)">Continue ♡</button>
+  </section>
+  <section class="screen" id="s2">
+    <div class="heart">🥺</div><h1>I know I hurt you</h1>
+    <p>I understand that what happened made you feel bad, and I’m truly sorry. Your feelings matter to me.</p>
+    <button onclick="go(3)">Next →</button>
+  </section>
+  <section class="screen" id="s3">
+    <h1>Little things I want to tell you…</h1><p class="small">Tap each heart 💗</p>
+    <div class="heart-buttons">
+      <button onclick="reveal(this,'I’m genuinely sorry for hurting you. 💗')">♡</button>
+      <button onclick="reveal(this,'I’ll listen better and try to understand your feelings. 💕')">♡</button>
+      <button onclick="reveal(this,'I know words aren’t enough — I want my actions to show it. 💜')">♡</button>
+    </div>
+    <p id="heartMsg">Choose a heart to reveal a little message.</p>
+    <button onclick="go(4)">My message →</button>
+  </section>
+  <section class="screen" id="s4">
+    <div class="paws">🧸💌</div><h1>From my heart…</h1>
+    <p>I have something more to say, Siya.</p>
+    <button onclick="go(5)">Tap to see my message ♡</button>
+  </section>
+  <section class="screen" id="s5">
+    <div class="note">
+      <h2>I’m Sorry, Siya 💗</h2>
+      <p>I’m truly sorry for hurting you. I know I can’t undo what happened, and I don’t want to act like your feelings aren’t important. You deserved more care and understanding from me.<br><br>I’m not asking you to forgive me right away. I just want to own my mistake, listen to you, and do better through my actions — not only my words.<br><br>You matter to me, Siya. Whenever you feel ready, I’m here to listen. ❤️</p>
+      <div class="signature">With care, always ♡</div>
+    </div>
+    <button style="margin-top:18px" onclick="go(0)">Open again ↻</button>
+  </section>
+</main>
+<script>
+function go(n){document.querySelectorAll('.screen').forEach((s)=>s.classList.remove('active'));document.getElementById('s'+n).classList.add('active')}
+function reveal(btn,msg){document.getElementById('heartMsg').textContent=msg;btn.textContent='♥';}
+</script>
+</body>
+</html>
